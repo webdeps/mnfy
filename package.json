@@ -1,0 +1,42 @@
+{
+  "name": "mnfy",
+  "description": "minify HTML/CSS/JS in a child process with caching",
+  "version": "1.0.0",
+  "author": "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)",
+  "license": "MIT",
+  "repository": "webdeps/mnfy",
+  "dependencies": {
+    "clean-css": "2",
+    "html-minifier": "^0.6.9",
+    "lazyrequire": "1",
+    "mkdirp": "0",
+    "mz": "1",
+    "slave": "1",
+    "uglify-js": "2"
+  },
+  "devDependencies": {
+    "bluebird": "2",
+    "mocha": "2",
+    "istanbul": "0"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot"
+  },
+  "keywords": [
+    "minify",
+    "minifier",
+    "css",
+    "js",
+    "child",
+    "process",
+    "subprocess"
+  ],
+  "files": [
+    "slave.js",
+    "master.js",
+    "lib"
+  ],
+  "main": "lib"
+}

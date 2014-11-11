@@ -1,0 +1,2 @@
+
+require('slave/slave')(require('./'))
