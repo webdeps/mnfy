@@ -1,12 +1,14 @@
 
 var assert = require('assert')
 
-describe('Standalone', function () {
-  var mnfy = require('..')
+var mnfy = require('..')
+require('rimraf').sync(mnfy.tmpdir)
+require('mkdirp').sync(mnfy.tmpdir)
 
+describe('Standalone', function () {
   it('should minify JS', function () {
     return mnfy.js('function hello() { \n console.log("lol"); }').then(function (js) {
-      assert.equal(js.code, 'function hello(){console.log("lol")}')
+      assert.equal(js, 'function hello(){console.log("lol")}')
     })
   })
 
@@ -36,7 +38,7 @@ describe('As a master/slave', function () {
 
   it('should minify JS', function () {
     return mnfy.js('function hello() { \n console.log("lol"); }').then(function (js) {
-      assert.equal(js.code, 'function hello(){console.log("lol")}')
+      assert.equal(js, 'function hello(){console.log("lol")}')
     })
   })
 
