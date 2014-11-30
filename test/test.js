@@ -8,19 +8,19 @@ require('mkdirp').sync(mnfy.tmpdir)
 describe('Standalone', function () {
   it('should minify JS', function () {
     return mnfy.js('function hello() { \n console.log("lol"); }').then(function (js) {
-      assert.equal(js, 'function hello(){console.log("lol")}')
+      assert.equal(js.code, 'function hello(){console.log("lol")}')
     })
   })
 
   it('should minify CSS', function () {
     return mnfy.css('body { box-sizing: border-box; }').then(function (css) {
-      assert.equal(css, 'body{box-sizing:border-box}')
+      assert.equal(css.code, 'body{box-sizing:border-box}')
     })
   })
 
   it('should minify HTML', function () {
     return mnfy.html('<html>    </html>').then(function (html) {
-      assert.equal(html, '<html> </html>')
+      assert.equal(html.code, '<html> </html>')
     })
   })
 
@@ -28,7 +28,7 @@ describe('Standalone', function () {
     return mnfy.html('<html>    </html>', {
       collapseWhitespace: true
     }).then(function (html) {
-      assert.equal(html, '<html></html>')
+      assert.equal(html.code, '<html></html>')
     })
   })
 })
@@ -38,19 +38,19 @@ describe('As a master/slave', function () {
 
   it('should minify JS', function () {
     return mnfy.js('function hello() { \n console.log("lol"); }').then(function (js) {
-      assert.equal(js, 'function hello(){console.log("lol")}')
+      assert.equal(js.code, 'function hello(){console.log("lol")}')
     })
   })
 
   it('should minify CSS', function () {
     return mnfy.css('body { box-sizing: border-box; }').then(function (css) {
-      assert.equal(css, 'body{box-sizing:border-box}')
+      assert.equal(css.code, 'body{box-sizing:border-box}')
     })
   })
 
   it('should minify HTML', function () {
     return mnfy.html('<html>    </html>').then(function (html) {
-      assert.equal(html, '<html> </html>')
+      assert.equal(html.code, '<html> </html>')
     })
   })
 
@@ -58,7 +58,7 @@ describe('As a master/slave', function () {
     return mnfy.html('<html>    </html>', {
       collapseWhitespace: true
     }).then(function (html) {
-      assert.equal(html, '<html></html>')
+      assert.equal(html.code, '<html></html>')
     })
   })
 })

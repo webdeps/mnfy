@@ -15,8 +15,9 @@ Suitable for long-running build systems on multicore computers.
 ```js
 var mnfy = require('mnfy/master')
 
-mnfy.js('function hello(){ return "world" }').then(function (js) {
-  // js === function hello(){return"world"}
+mnfy.js('function hello(){ return "world" }').then(function (res) {
+  // res.code === function hello(){return"world"}
+  // res.map === ???
 })
 ```
 
@@ -25,15 +26,15 @@ but minification will no longer run in a separate process.
 
 ## API
 
-### mnfy.js(string, [options]).then( js => )
+### mnfy.js(string, [options]).then( res => )
 
 Minify JS. Options are passed to `uglify-js`.
 
-### mnfy.css(string, [options]).then( css => )
+### mnfy.css(string, [options]).then( res => )
 
 Minifies CSS. Options are passed to `clean-css`.
 
-### mnfy.html(string, [options]).then( html => )
+### mnfy.html(string, [options]).then( res => )
 
 Minifies HTML. Options are passed to `html-minifer`.
 
