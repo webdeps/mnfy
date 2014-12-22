@@ -6,8 +6,8 @@
   "license": "MIT",
   "repository": "webdeps/mnfy",
   "dependencies": {
-    "clean-css": "2",
-    "html-minifier": "^0.6.9",
+    "clean-css": "3",
+    "html-minifier": "0",
     "lazyrequire": "1",
     "mkdirp": "0",
     "mz": "1",
