@@ -7,7 +7,6 @@
 [![Dependency Status][david-image]][david-url]
 [![License][license-image]][license-url]
 [![Downloads][downloads-image]][downloads-url]
-[![Gittip][gittip-image]][gittip-url]
 
 Minify your HTML, CSS, and JS in a child process with caching.
 Suitable for long-running build systems on multicore computers.
@@ -59,5 +58,3 @@ Fork more processes to use more cores.
 [license-url]: LICENSE
 [downloads-image]: http://img.shields.io/npm/dm/mnfy.svg?style=flat-square
 [downloads-url]: https://npmjs.org/package/mnfy
-[gittip-image]: https://img.shields.io/gratipay/jonathanong.svg?style=flat-square
-[gittip-url]: https://gratipay.com/jonathanong/
