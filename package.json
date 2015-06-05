@@ -10,7 +10,7 @@
     "html-minifier": "0",
     "lazyrequire": "1",
     "mkdirp": "0",
-    "mz": "1",
+    "mz": "^2.0.0",
     "slave": "1",
     "uglify-js": "2"
   },
