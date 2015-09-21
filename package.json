@@ -6,13 +6,13 @@
   "license": "MIT",
   "repository": "webdeps/mnfy",
   "dependencies": {
-    "clean-css": "3",
-    "html-minifier": "0",
-    "lazyrequire": "1",
+    "clean-css": "^3.4.4",
+    "html-minifier": "^0.7.2",
+    "lazyrequire": "^1.2.1",
     "mkdirp": "0",
     "mz": "^2.0.0",
-    "slave": "1",
-    "uglify-js": "2"
+    "slave": "^1.2.2",
+    "uglify-js": "^2.4.24"
   },
   "devDependencies": {
     "bluebird": "2",
