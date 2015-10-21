@@ -31,7 +31,7 @@ Minify JS. Options are passed to `uglify-js`.
 
 ### mnfy.css(string, [options]).then( res => )
 
-Minifies CSS. Options are passed to `clean-css`.
+Minifies CSS. Options are passed to `cssnano`.
 
 ### mnfy.html(string, [options]).then( res => )
 
