@@ -18,6 +18,12 @@ describe('Standalone', function () {
     })
   })
 
+  it('should minify CSS in safe mode by default', function () {
+    return mnfy.css('body { z-index: 1000; }').then(function (css) {
+      assert.equal(css.code, 'body{z-index:1000}')
+    })
+  })
+
   it('should minify HTML', function () {
     return mnfy.html('<html>    </html>').then(function (html) {
       assert.equal(html.code, '<html> </html>')
