@@ -7,7 +7,7 @@
   "repository": "webdeps/mnfy",
   "dependencies": {
     "cssnano": "^3.3.1",
-    "html-minifier": "^1.0.0",
+    "html-minifier": "^1.0.1",
     "lazyrequire": "^1.2.1",
     "mkdirp": "0",
     "mz": "^2.0.0",
