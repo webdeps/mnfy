@@ -24,6 +24,12 @@ describe('Standalone', function () {
     })
   })
 
+  it('should not mess with colors in fony-family', function () {
+    return mnfy.css('body { font-family: Mark Pro Black }').then(function (css) {
+      assert(!/#000/.test(css))
+    })
+  })
+
   it('should minify HTML', function () {
     return mnfy.html('<html>    </html>').then(function (html) {
       assert.equal(html.code, '<html> </html>')
